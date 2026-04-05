@@ -1,0 +1,23 @@
+name: agrifood-network
+version: "2.0.0"
+
+caliper:
+  blockchain: fabric
+
+channels:
+  - channelName: mychannel
+    contracts:
+      - id: agrifood
+
+organizations:
+  - mspid: Org1MSP
+    identities:
+      certificates:
+        - name: admin-org1
+          clientPrivateKey:
+            path: /home/abdullah/go/src/github.com/Agrifood/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/fa1d915445c945eecfef3a0bf881912be67b65c9a1d167e2b98cc9d600a851b4_sk
+          clientSignedCert:
+            path: /home/abdullah/go/src/github.com/Agrifood/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/signcerts/cert.pem
+    connectionProfile:
+      path: /home/abdullah/go/src/github.com/Agrifood/fabric-samples/test-network/organizations/peerOrganizations/org1.example.com/connection-org1.yaml
+      discover: true

@@ -1,0 +1,25 @@
+test:
+  name: agrifood-benchmark
+  description: Performance benchmark for Agrifood supply chain chaincode
+  workers:
+    number: 5
+  rounds:
+    - label: CreateProduct
+      description: Farmer creates products on the ledger
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 100
+      workload:
+        module: benchmarks/workload/createProduct.js
+
+    - label: GetAllProducts
+      description: Query all products from ledger
+      txNumber: 1000
+      rateControl:
+        type: fixed-rate
+        opts:
+          tps: 100
+      workload:
+        module: benchmarks/workload/getProduct.js
