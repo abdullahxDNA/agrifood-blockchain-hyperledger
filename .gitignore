@@ -12,3 +12,6 @@ test-network/channel-artifacts/
 
 # Fabric CA server files
 *.db
+
+# Explorer runtime crypto (generated at runtime)
+explorer/organizations/
